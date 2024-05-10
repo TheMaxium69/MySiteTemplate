@@ -39,15 +39,11 @@ function extension()
 
         var_dump($oneFileExention);
 
-//        if ($oneFile !== "." && $oneFile !== ".." && $oneFile !== "meta.phtml" && substr($oneFile, -6) === ".phtml"){
-//
-//            $functionName = substr($oneFile, 0, -6);
-//
-//            $$functionName = function() use ($functionName, $SYSTEM_COMPOSANT, $oneFile) {
-//                require $SYSTEM_COMPOSANT . $oneFile;
-//            };
-//
-//        }
+        if ($oneFileExention !== "." && $oneFileExention !== ".." && substr($oneFile, -6) === ".phtml"){
+
+
+
+        }
 
     }
 
@@ -59,6 +55,16 @@ function extension()
 
 
         var_dump($oneFileCss);
+
+
+
+
+
+
+
+
+//<link rel="stylesheet" type="text/css" media="screen" href="css/all.css">
+//<link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
 
 
     }

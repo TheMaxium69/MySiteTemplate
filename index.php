@@ -15,7 +15,7 @@
 
 
 
-
+<?php $js_exemple(); ?>
 
 
 <?php require ".tyrositeframework/end.php"; ?>

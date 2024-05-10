@@ -19,18 +19,18 @@ foreach ($files as $oneFile) {
 
 /*GENERATE JS*/
 
-//$files = scandir($SYSTEM_COMPOSANT);
-//
-//foreach ($files as $oneFile) {
-//
-//    if ($oneFile !== "." && $oneFile !== ".." && substr($oneFile, -6) === ".phtml"){
-//
-//        $functionName = "cp_" . substr($oneFile, 0, -6);
-//
-//        $$functionName = function() use ($functionName, $SYSTEM_COMPOSANT, $oneFile) {
-//            require $SYSTEM_COMPOSANT . $oneFile;
-//        };
-//
-//    }
-//
-//}
+
+$filesJS = scandir($SYSTEM_JAVASCRIPT);
+
+foreach ($filesJS as $oneFileJS) {
+
+    if ($oneFileJS !== "." && $oneFileJS !== ".." && substr($oneFileJS, -3) === ".js"){
+
+        $functionNameJS = "js_" . substr($oneFileJS, 0, -3);
+        $$functionNameJS = function() use ($functionNameJS, $SYSTEM_JAVASCRIPT, $oneFileJS) {
+            echo "<script src='" . $SYSTEM_JAVASCRIPT . $oneFileJS . "'></script>";
+        };
+
+    }
+
+}
