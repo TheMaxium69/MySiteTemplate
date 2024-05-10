@@ -27,7 +27,7 @@ function meta()
 
 }
 
-function extension()
+function extension($page_id)
 {
     require "app/env.php";
 
@@ -37,11 +37,10 @@ function extension()
 
     foreach ($files_exention as $oneFileExention) {
 
-        var_dump($oneFileExention);
 
         if ($oneFileExention !== "." && $oneFileExention !== ".." && substr($oneFileExention, -6) === ".phtml"){
 
-
+            require $SYSTEM_EXTENSION . $oneFileExention;
 
         }
 
@@ -50,25 +49,24 @@ function extension()
     /* GENERATE CSS*/
     $files_css = scandir($SYSTEM_CSS);
 
-
     foreach ($files_css as $oneFileCss) {
 
-
-        var_dump($oneFileCss);
-
+        if ($oneFileCss !== "." && $oneFileCss !== ".." && $oneFileCss !== "all.css" && substr($oneFileCss, -4) === ".css"){
 
 
+            foreach ($env_css_global as $oneAllFileGlobalCSS){
+                echo '<link rel="stylesheet" type="text/css" media="screen" href="'. $SYSTEM_CSS . $oneAllFileGlobalCSS .'">';
+
+            }
 
 
+            if ($oneFileCss === $env_page[$page_id]['css']){
+                echo '<link rel="stylesheet" type="text/css" media="screen" href="'. $SYSTEM_CSS . $oneFileCss .'">';
+            }
 
 
-
-//<link rel="stylesheet" type="text/css" media="screen" href="css/all.css">
-//<link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
-
+        }
 
     }
-
-
 
 }

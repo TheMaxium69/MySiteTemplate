@@ -10,12 +10,12 @@
 $APP_ENV = "prod";
 
 // Link Variable
-$SYSTEM_FRAMEWORK = ".tyrositeframework/";
-$SYSTEM_EXTENSION = "file_extension/";
-$SYSTEM_CSS = "file_css/";
-$SYSTEM_JAVASCRIPT = "file_javascript/";
-$SYSTEM_ASSETS = "file_assets/";
+$SYSTEM_FRAMEWORK = "@tyrositeframework/";
 $SYSTEM_COMPOSANT = "composant/";
+$SYSTEM_EXTENSION = "file_extension/";
+$SYSTEM_ASSETS = "file_assets/";
+$SYSTEM_JAVASCRIPT = "file_javascript/";
+$SYSTEM_CSS = "file_css/";
 
 // Data
 $DATABASE = "app/database." . $APP_ENV . ".php";
@@ -44,9 +44,25 @@ $env_page = array(
         "title" => "Accueil | " . $env_name,
         "name" => "Accueil",
         "url" => "./",
-        "css" => "index",
+        "css" => "index.css",
+    ),
+    2 => array(
+        "title" => "Exemple | " . $env_name,
+        "name" => "Exemple",
+        "url" => "./exemple.php",
+        "css" => "exemple.css",
     ),
     /*...*/
+);
+
+// FILE CSS GLOBAL
+$env_css_global = array(
+    "all.css",
+);
+
+// FILE JS GLOBAL
+$env_js_global = array(
+    "start.js"
 );
 
 /*************************

@@ -1,4 +1,4 @@
-<?php $page_id = 1; require "@tyrositeframework/start.php"; ?>
+<?php $page_id = 2; require "@tyrositeframework/start.php"; ?>
 
 
 

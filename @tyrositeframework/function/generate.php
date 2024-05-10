@@ -8,7 +8,8 @@ foreach ($files as $oneFile) {
 
         $functionName = "cp_" . substr($oneFile, 0, -6);
 
-        $$functionName = function() use ($functionName, $SYSTEM_COMPOSANT, $oneFile) {
+        $$functionName = function() use ($functionName, $oneFile, $page_id) {
+            require "app/env.php";
             require $SYSTEM_COMPOSANT . $oneFile;
         };
 

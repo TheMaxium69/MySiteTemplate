@@ -1,3 +1,25 @@
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Exemple Site</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="<?= $env_logo ?>" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <?= $env_name ?>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <?php for ($i = 0; $i < count($env_page); $i++) {
+                    if ($i !== 0){ ?>
+                    <li class="nav-item">
+                        <?php if ($i === $page_id) {  ?>
+                        <a class="nav-link active" style="text-decoration: underline" href="<?= $env_page[$i]['url'] ?>"><?= $env_page[$i]['name'] ?></a>
+                        <?php } else {  ?>
+                        <a class="nav-link" href="<?= $env_page[$i]['url'] ?>"><?= $env_page[$i]['name'] ?></a>
+                        <?php } ?>
+                    </li>
+                <?php }} ?>
+            </ul>
+        </div>
+    </div>
 </nav>
