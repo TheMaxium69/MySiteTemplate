@@ -39,7 +39,7 @@ function extension()
 
         var_dump($oneFileExention);
 
-        if ($oneFileExention !== "." && $oneFileExention !== ".." && substr($oneFile, -6) === ".phtml"){
+        if ($oneFileExention !== "." && $oneFileExention !== ".." && substr($oneFileExention, -6) === ".phtml"){
 
 
 

@@ -17,8 +17,9 @@ $SYSTEM_JAVASCRIPT = "file_javascript/";
 $SYSTEM_ASSETS = "file_assets/";
 $SYSTEM_COMPOSANT = "composant/";
 
-// DataBase
+// Data
 $DATABASE = "app/database." . $APP_ENV . ".php";
+$SALT = "app/salt." . $APP_ENV . ".php";
 
 
 /*************************
@@ -40,9 +41,10 @@ $env_page = array(
     0 => "404 | " . $env_name,
     //Page
     1 => array(
-        "title" => "Home | " . $env_name,
-        "name" => "Home",
+        "title" => "Accueil | " . $env_name,
+        "name" => "Accueil",
         "url" => "./",
+        "css" => "index",
     ),
     /*...*/
 );
