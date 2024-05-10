@@ -7,7 +7,5 @@
 FrameWork Php, pour simplifier la création de Site Web créer pour et par l'entreprise Tyrolium
 
 <img src=".tyrogit/repo.png" alt="Logo Markdown" width="100" height="100">
-<br>
-<br>
 
-[![ViewDocs](https://img.shields.io/badge/VIEW_DOCS-FF0000?style=for-the-badge)](https://tyrolium.fr)
+[![ViewDocs](https://img.shields.io/badge/VIEW_DOCS-FF0000?style=for-the-badge)](https://github.com/TheMaxium69/TyroSiteFrameWork/blob/v2/%40tyrositeframework/docs/doc.md)
