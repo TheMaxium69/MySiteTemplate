@@ -1,11 +1,21 @@
-<?php include "app/app.php"; $page = 1; head($page); ?>
-<body> <header> <?php navbar($page); ?> </header>
+<?php $page_id = 1; require ".tyrositeframework/start.php"; ?>
+
+
+
+
+<header> <?php $cp_navbar(); ?> </header>
 
 <main>
 
-    <p>Exemple</p>
+    <p><?= $env_titre ?></p>
 
 </main>
 
 
-</body> </html>
+
+
+
+
+
+
+<?php require ".tyrositeframework/end.php"; ?>

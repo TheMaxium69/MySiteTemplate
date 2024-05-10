@@ -1,10 +1,15 @@
+# DATA
+app/database.dev.php
+app/database.prod.php
+app/salt.dev.php
+app/salt.prod.php
+
 # Ide
 .idea/
+.vscode/
 
 # Lib
 
 # file/
 
 # Other files and folders
-
-# file/
